@@ -1,3 +1,4 @@
+import './App.css'
 import Form from './components/Form'
 import MovieDisplay from './components/MovieDisplay';
 import { useState, useEffect } from 'react'
