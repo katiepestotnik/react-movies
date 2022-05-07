@@ -1,9 +1,10 @@
 
 const MovieDisplay = ({ movie }) => {
     if (movie) {
-        const ratings = movie.Ratings.map((ele) => {
+        const ratings = movie.Ratings.map((ele, indx) => {
             return (
                 <>
+                    
                     <div>{ele.Source}</div>
                     <div>Rating: {ele.Value}</div>
                 </>

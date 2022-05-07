@@ -16,10 +16,17 @@ function App() {
     console.log(data)
     setMovie(data)
   }
+  const movies = ["Jurassic Park", "Blade Runner", "Lord of the Rings", "The Northman", "The Hobbit", "The Dark Knight"]
+  const rando = () => {
+    let num = Math.floor(Math.random() * movies.length)
+    return movies[num]
+ }
+
+
   //function runs 1 time when the component loads
   //will only repeat if any value in the array changes
   useEffect(() => {
-    getMovie("Jurassic Park")
+    getMovie(rando())
   },[])
   return (
     <div className="App">
