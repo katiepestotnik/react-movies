@@ -10,11 +10,17 @@ function App() {
     //api call
     const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`)
     //converting to js object
+    console.log(response)
     const data = await response.json()
     //updating state
     console.log(data)
     setMovie(data)
   }
+  //function runs 1 time when the component loads
+  //will only repeat if any value in the array changes
+  useEffect(() => {
+    getMovie("Jurassic Park")
+  },[])
   return (
     <div className="App">
       <Form getMovie={getMovie}/>
